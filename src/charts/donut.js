@@ -3,6 +3,7 @@ define(function(require){
 
     const d3Dispatch = require('d3-dispatch');
     const d3Ease = require('d3-ease');
+    const d3Format = require('d3-format');
     const d3Interpolate = require('d3-interpolate');
     const d3Scale = require('d3-scale');
     const d3Shape = require('d3-shape');
@@ -13,12 +14,11 @@ define(function(require){
     const textHelper = require('./helpers/text');
     const colorHelper = require('./helpers/colors');
 
-
     /**
      * @typedef DonutChartData
      * @type {Object[]}
      * @property {Number} quantity     Quantity of the group (required)
-     * @property {Number} percentage   Percentage of the total (required)
+     * @property {Number} percentage   Percentage of the total (optional)
      * @property {String} name         Name of the group (required)
      * @property {Number} id           Identifier for the group required for legend feature (optional)
      *
@@ -101,6 +101,8 @@ define(function(require){
                 d.outerRadius = externalRadius - radiusHoverOffset;
             },
             sortComparator = (a, b) => b.quantity - a.quantity,
+            calculatePercent = (quantity, total) => d3Format.format('.1f')(quantity / total * 100), // Leigh should these go here or in helpers/common.js?
+            sumValues = (data) => data.reduce((total, d) => d.quantity + total, 0),
 
             // extractors
             getQuantity = ({quantity}) => quantity,
@@ -205,10 +207,12 @@ define(function(require){
          * @private
          */
         function cleanData(data) {
+            let totalQuantity = sumValues(data);
+
             return data.map((d) => {
                 d.quantity = +d[quantityLabel];
                 d.name = String(d[nameLabel]);
-                d.percentage = String(d[percentageLabel]);
+                d.percentage = String(d.percentage || calculatePercent(d[quantityLabel], totalQuantity));
 
                 return d;
             });
