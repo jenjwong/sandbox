@@ -1,5 +1,6 @@
 # sandbox
 
-[https://jenjwong.github.io/text-clamping-implementations/](https://jenjwong.github.io/sandbox/)
+[board](https://jenjwong.github.io/sandbox/)
 
-Simple flexboax board that grabs coordinates from clicked pieces.
+X and Y positions are declared on each element's class. Open the console to see the position of the clicked piece.
+
