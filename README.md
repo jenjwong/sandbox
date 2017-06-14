@@ -54,8 +54,8 @@ Clone the repository and run npm install to get a copy of the project up and run
 ### Client-Side Technologies
 Expense Trackr uses a handle of open-source libraries to streamline production on the Front-End:
 
-* [Facebook's Create React App](https://github.com/facebookincubator/create-react-app) enables lightening-fast initialization of React projects and with a few tweaks can be hooked-up to any back-end.
-* [Blueprint](http://blueprintjs.com/), Palantir's [new React-based UI toolkit](https://medium.com/@palantir/scaling-product-design-with-blueprint-25492827bb4a). Is used for consistent styling of UI. It has a handful of built-in accessibility features.
+* [Facebook's Create React App](https://github.com/facebookincubator/create-react-app) enables fast initialization of React projects.
+* [Blueprint](http://blueprintjs.com/), Palantir's [new React-based UI toolkit](https://medium.com/@palantir/scaling-product-design-with-blueprint-25492827bb4a) is used for elegant consistent styling of UI and has a handful of built-in accessibility features.
 * Redux-Forms is used to minimize form boiler plate code
 
 
