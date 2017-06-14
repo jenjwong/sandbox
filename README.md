@@ -78,6 +78,9 @@ Expense Trackr's database is designed with User and Expense models and uses agre
 ### API Design
 Expense Trackr uses REST-APIs. Click here for complete documentation.
 
+### Routing
+React-Router 4. Auth is handled on the backend and API's are protected server side. Client routes users who haven't signed in to login page.
+
 ## Tests
 
 Bands Nearby uses [Jest](https://facebook.github.io/jest/) with [Enzyme](https://github.com/airbnb/enzyme). Enzyme allows shallow rendering of components, making it easy to isolate tests. Shallow rendering in Enzyme renders components one level deep so a component can be tested in isolation of its child components.
