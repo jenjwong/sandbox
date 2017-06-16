@@ -44,7 +44,7 @@ Flow of control is implemented using ES6 async await; error-handling is managed 
 Expense Trackr's database has a User and Expense model and uses agregation for complex queries. Expense Trackr implements this relationship with by placing User_id as a foreign key on Expenses, allowing for future feature developemnt of shared expenses.
 
 ### API Design
-Expense Trackr uses REST-APIs. Click here for complete documentation.
+Expense Trackr uses REST-APIs. Click here for complete documentation (comming soon!)
 
 ### Routing
 Expense Trackr uses React-Router 4. Auth is handled on the backend and API's are protected server-side. The client routes users who are not signed-in to login page and API endpoints only accept calls from logged-in users.
