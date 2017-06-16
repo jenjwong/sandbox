@@ -80,7 +80,7 @@ jest no-cacheless
 Mongo models and operations are tested with Mocha and stub-data.
 
 ## Redux Architecture
-Expense Trackr manages state with Redux. The store is designed like a relational database to minimize duplication of data. Expensees are stored in a centralized dictionary and are accessed through arrays that track look-up indexes.
+Expense Trackr manages state with Redux. The store is designed like a relational database to minimize duplication of data. Expenses are stored in a centralized dictionary and are accessed through arrays that track look-up indexes.
 
 
 ## License
