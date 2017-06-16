@@ -11,50 +11,28 @@ Generate personalized big-data about spending habits by manually entering expens
 
 ### Technologies
 
-* esNext
-* React
-* React-Router
-* Redux
-* Redux-Promise
-* Redux-Forms
-* Blueprint Core and Date-Time
+#### Client
+* es6, React, React-Router, Redux, Redux-Thunk, Redux-Forms, Blueprint, Flexbox
 
-* MongoDB
-* Node.js
-* Express
-* Express-Sessions
-* Passport
+#### Server
+* Node.js, Express, Express-Sessions, Passport, MongoDB, Mongoose, Concurrently
 
-* Concurrently
-
-* Normalizr
-* Enzyme
-* Jest
-* Mocha
-
-
-* JSDom
-* Bluebird Promises
-* Google Caja Sanitizer
-* Flexbox
+#### Testing
+* Enzyme, Jest, Mocha, codecept.js
 
 Bands Nearby Beta is available on web: http://beta.bandsnearby.com/
 
 Bands Nearby Desktop:
 ![alt text](https://github.com/jenjwong/bands-nearby/blob/development/css/images/desktop.png "Bands Nearby Desktop")
 
-
-
 ## Getting Started
 
-Clone the repository and run npm install to get a copy of the project up and running on your local machine. Start the development environment by running npm run dev from the root directory.
-
---write script for all the installs
+To get a copy of the project up and running on your local machine clone the repository and from the root directory run npm install-packages. Start the development environment by running npm run dev from the root directory. This command starts the webpack dev-server, the express server and starts the mongo daemon.
 
 ### Client-Side Technologies
-Expense Trackr uses a handle of open-source libraries to streamline production on the Front-End:
+To streamline Front-End developement Expense Trackr uses:
 
-* [Facebook's Create React App](https://github.com/facebookincubator/create-react-app) enables fast initialization of React projects.
+* [Facebook's Create React App](https://github.com/facebookincubator/create-react-app)
 * [Blueprint](http://blueprintjs.com/), Palantir's [new React-based UI toolkit](https://medium.com/@palantir/scaling-product-design-with-blueprint-25492827bb4a) is used for elegant consistent styling of UI and has a handful of built-in accessibility features.
 * Redux-Forms is used to minimize form boiler plate code
 
