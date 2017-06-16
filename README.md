@@ -51,16 +51,10 @@ Expense Trackr uses React-Router 4. Auth is handled on the backend and API's are
 
 ## Tests
 
-Codecept.js, a JavaScript Selenium wrapper is used for end-to-end testing. Codecept.js stores pictures of browser state during failed tests in endToend.output. With your server and mongo deamon started run the selenium server:
+Codecept.js, a JavaScript Selenium wrapper is used for end-to-end testing. Codecept.js stores pictures of browser state during failed tests in endToend.output. With your server and mongo deamon started run:
 
 ```
-selenium-standalone start
-```
-
-and cd into test/endToend and run
-
-```
-codeceptjs run --steps
+npm run headless-tests
 ```
 
 React components are testsed with [Jest](https://facebook.github.io/jest/) with [Enzyme](https://github.com/airbnb/enzyme). Enzyme allows shallow rendering of components, making it easy to isolate tests. Shallow rendering in Enzyme renders components one level deep so a component can be tested in isolation of its child components.
