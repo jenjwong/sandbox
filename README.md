@@ -51,6 +51,8 @@ Expense Trackr uses React-Router 4. Auth is handled on the backend and API's are
 
 ## Tests
 
+Expense Trackr implements unit and end-to-end testing with Mocha, Enzyme, Jest, and Codecept.js.
+
 Codecept.js, a JavaScript Selenium wrapper is used for end-to-end testing. Codecept.js stores pictures of browser state during failed tests in endToend.output. With your server and mongo deamon started run:
 
 ```
@@ -78,9 +80,7 @@ jest no-cacheless
 Mongo models and operations are tested with Mocha and stub-data.
 
 ## Redux Architecture
-Bands Nearby manages state with Redux. Fetched data is flattened with Normalizr. The store is designed like a relational database to minimize duplication of data. Concerts are stored in a centralized dictionary and are accessed through arrays that track look-up ids.
-
-Bands Nearby uses higher-order reducers to batch dispatching minimizing unnecessary renders.
+Expense Trackr manages state with Redux. The store is designed like a relational database to minimize duplication of data. Expensees are stored in a centralized dictionary and are accessed through arrays that track look-up indexes.
 
 
 ## License
