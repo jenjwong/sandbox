@@ -30,8 +30,8 @@ My solution uses a 2-d matrix to keep track of game state. Helpers are broken in
 1. Starts at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
   * add the letter to the firstPartOfWord string
-  b) check if there are tiles above or below
-    i) if there are tiles above or below, call findWordByColumn
+  * check if there are tiles above or below
+    * if there are tiles above or below, call findWordByColumn
 3. While there are tiles to the right, for each tile:
   a) add the letter to the lastPartOfWord string
   b) check if there are tiles above or below
