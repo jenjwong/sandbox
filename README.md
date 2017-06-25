@@ -47,6 +47,6 @@ This is a fun problem with lots of possible solutions! Another solution would ha
 ## playTiles
 1. Runs validation function *rules.isFirstMoveValid* if it is the first move
 2. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis)
-3. If placement of tiles is valid, it places the tiles on the board and scores the word by running *_scoreWords*
-4. If there were no valid words and score is 0, it runs *_moveTiles* to remove tiles from board
+3. If placement of tiles is valid, it places the tiles on the board and scores the word by running *_scoreWords* (which calls *findWordByRow* or *findWordByColumn*)
+4. If there were no valid words, it runs *_moveTiles* to remove tiles from board
 5. Sets score in ScrabbleGame and returns score by running *_setScore*
