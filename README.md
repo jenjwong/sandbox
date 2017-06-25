@@ -26,7 +26,7 @@ npm run test -s
 
 My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. The *rules module* handles validation of pieces based on physical location on the board. The *words module* handles validation reliant on words. The *score module* handles calculating points for tiles. 
 
-The most challenging problem was scoring multiple words; this was handled with *findWordByRow* and *findWordByColumn*. Depending on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn which is used to generate a score. While findWordByRow/findWordByColumn traverses the main axis and builds up a string of the current word, it also checks to see if there are any tiles adjacent to tiles placed during that turn. If there are adjacent tiles, the function traverses the cross-axis to see if its a valid word.
+The most challenging problem was scoring multiple words; this was handled with *findWordByRow* and *findWordByColumn*. Depending on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn which is used to generate a score. findWordByRow/findWordByColumn traverses the main axis and builds up a string of the current word, it also checks to see if there are any tiles adjacent to tiles placed during that turn. If there are adjacent tiles, the function traverses the cross-axis to see if its a valid word.
 
 ## findWordByRow  
 1. Starts at the coordinates of first tile placed
@@ -49,7 +49,6 @@ findWordByColumn works the same way. It was tempting to combine the functions in
 This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words on each turn by traversing the board and comparing against a dictionary of words already played this game to determine which words were newly generated. Although I think it would be easier to code this solution, I opted against it because of its increased memory usage and quadratic run time. Arguably the board is a set size and only a relatively small number of words can be placed on the board, so it's not necessary to optimize for worst case scenarios with massive input, but my chosen approach lent itself more to logical seperation of functionality.
 
 Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to test for additional edge-cases and write more tests.
-
 
 Tests call *playTiles* which coordinates all of the other functions used to generate the score.
 
