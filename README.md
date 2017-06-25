@@ -1,3 +1,4 @@
+
 # Getting started
 
 To get the project set up in your local environment install dependencies:
@@ -41,11 +42,11 @@ My solution uses a board/2-d-matrix to keep track of game state. Helpers are bro
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
 6. Return allWordsForPlay
 
-findWordByColumn works the same way. It was tempting to combine the functions into one that could be customized, but it unecesariy increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explictly defines its variables, making it longer but more legible.
+findWordByColumn works the same way. It was tempting to combine the functions into one that could be customized, but it unnecessarily increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explicitly defines its variables, making it longer but more legible.
 
-This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words from the board on each turn and compare against a dictionary of words already played this game to determine which new words were generated that turn. I opted against this solution because of it's increased memory usage and quadratic runtime.
+This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words from the board on each turn by traversing the board and comparing against a dictionary of words already played this game to determine which new words were generated that turn. I opted against this solution because of it's increased memory usage and quadratic run time. Arguably the board is a set size and only a relatively small number of words can be placed on the board, so it's not necessary to optimize for worst case scenarios with massive input, but I found I was able to organize my code better by functionality with the chosen approach. 
 
-Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to test for additional edgecases and write more tests.
+Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to test for additional edge-cases and write more tests.
 
 ## playTiles
 1. Runs validation function *rules.isFirstMoveValid* if it is the first move
