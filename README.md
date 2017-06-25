@@ -40,7 +40,7 @@ The most challenging problem was scoring multiple words; this was handled with *
     * If the tile was placed this turn, check if there are tiles above or below
       * If there are tiles above or below and you are traversing the first word, call findWordByColumn
           * If findWordByColumn returns a valid word, add to allWordsForPlay array
-4. Add firstPartOfWord and lastPartOfWord to get full currentWord
+4. Add firstPartOfWord and lastPartOfWord to get currentWord
 5. If currentWord is in the dictionary add it to the allWordsForTurn array
 6. Return allWordsForTurn
 
