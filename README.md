@@ -26,19 +26,19 @@ npm run test -s
 
 My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. The *rules module* handles validation of pieces based on physical location on the board. The *words module* handles validation reliant on words. The *score module* handles calculating points for tiles. 
 
-The most challenging problem was scoring multiple words; this was handled with *findWordByRow* or *findWordByColumn*. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score. The findWord functions builds up a string along the main axis. As the function traverses the main axis and builds the string it also checks to see if there are any tiles adjacent to tiles placed during that turn, and if there are the function traverses the cross axis to see if its a valid word.
+The most challenging problem was scoring multiple words; this was handled with *findWordByRow* and *findWordByColumn*. Depending on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn which is used to generate a score. While findWordByRow/findWordByColumn traverses the main axis and builds up a string of the current word, it also checks to see if there are any tiles adjacent to tiles placed during that turn. If there are adjacent tiles, the function traverses the cross-axis to see if its a valid word.
 
 ## findWordByRow  
 1. Starts at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
     * Add the letter to the firstPartOfWord string
     * If the tile was placed this turn, check if there are tiles above or below
-      * If there are tiles above or below and you are on the main axis, call findWordByColumn
+      * If there are tiles above or below and you are traversing the first word, call findWordByColumn
         * If findWordByColumn returns a valid word, add to allWordsForPlay array
 3. While there are tiles to the right, for each tile:
     * Add the letter to the lastPartOfWord string
     * If the tile was placed this turn, check if there are tiles above or below
-      * If there are tiles above or below and you are on the main axis, call findWordByColumn
+      * If there are tiles above or below and you are traversing the first word, call findWordByColumn
           * If findWordByColumn returns a valid word, add to allWordsForPlay array
 4. Add firstPartOfWord and lastPartOfWord to get full currentWord
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
