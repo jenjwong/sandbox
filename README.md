@@ -15,11 +15,13 @@ npm run test -s
 # Files
 
 - `test/scrabble_test.js`: The tests for the Scrabble logic.
-- `index.js`: Where you need to implement the game's logic to make the tests pass.
-- `dictionary.js`: A helper to test if a word is valid.
+- `index.js`: Implements game logic.
+- `dictionary.js`: Helpers to test if words are valid.
+- `score.js`: Helpers to calculate score.
+- `rules.js`: Helpers to check if tile placements are valid.
 
 
-
+# Solution
 
 My solution uses a 2-d matrix to keep track of game state. Helpers are broken into modules by functionality. Depending on wether the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called generate a list of valid words for the turn.
 
