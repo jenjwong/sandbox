@@ -26,7 +26,7 @@ npm run test -s
 My solution uses a 2-d matrix to keep track of game state. Helpers are broken into modules by functionality. Depending on wether the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called generate a list of valid words for the turn.
 
 
-##findWordByRow
+## findWordByRow
 1. Starts at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
   a) add the letter to the firstPartOfWord string
@@ -44,7 +44,7 @@ findWordByColumn works the same way. It was tempting to combine the functions in
 
 This is a fun problem with lots of possible solutions! Another solution would have been to generate all words from the board on each turn and compare against a dictionary of words already played this game to determine which new words were generated that turn. I opted against this solution because of it's increased memory usage and quadratic runtime.
 
-##playTiles
+## playTiles
 1. Runs validation function *rules.isFirstMoveValid* if it is the first move
 2. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis)
 3. If placement of tiles is valid, it places the tiles on the board and scores the word by running *_scoreWords*
