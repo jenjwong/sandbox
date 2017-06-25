@@ -29,20 +29,20 @@ My solution uses a board(2-d-matrix) to keep track of game state. Helpers are br
 ## findWordByRow
 1. Starts at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
-    * add the letter to the firstPartOfWord string
-    * check if there are tiles above or below
-      * if there are tiles above or below, call findWordByColumn
-        * if findWordByColumn returns a valid word, add to allWordsForPlay array
+    * Add the letter to the firstPartOfWord string
+    * Check if there are tiles above or below
+      * If there are tiles above or below, call findWordByColumn
+        * If findWordByColumn returns a valid word, add to allWordsForPlay array
 3. While there are tiles to the right, for each tile:
-    * add the letter to the lastPartOfWord string
-    * check if there are tiles above or below
-      * if there are tiles above or below, call findWordByColumn
-          * if findWordByColumn returns a valid word, add to allWordsForPlay array
+    * Add the letter to the lastPartOfWord string
+    * Check if there are tiles above or below
+      * If there are tiles above or below, call findWordByColumn
+          * If findWordByColumn returns a valid word, add to allWordsForPlay array
 4. Add firstPartOfWord and lastPartOfWord to get full currentWord
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
 6. Return allWordsForPlay
 
-findWordByColumn works the same way. It was tempting to combine the functions into one that could be customized, but it unnecessarily increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explicitly defines its variables, making it longer but more legible.
+findWordByColumn works the same way. It was tempting to combine the functions into one that could be customized, but it unnecessarily increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explicitly defines its variables, making it longer but more intuitive.
 
 This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words from the board on each turn by traversing the board and comparing against a dictionary of words already played this game to determine which new words were generated that turn. I opted against this solution because of it's increased memory usage and quadratic run time. Arguably the board is a set size and only a relatively small number of words can be placed on the board, so it's not necessary to optimize for worst case scenarios with massive input, but I found I was able to organize my code better by functionality with the chosen approach. 
 
