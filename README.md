@@ -31,12 +31,12 @@ My solution uses a board/2-d-matrix to keep track of game state. Helpers are bro
     * add the letter to the firstPartOfWord string
     * check if there are tiles above or below
       * if there are tiles above or below, call findWordByColumn
-        * if findWordByColumn returns a valid word, add to allWordsForPlay
+        * if findWordByColumn returns a valid word, add to allWordsForPlay array
 3. While there are tiles to the right, for each tile:
     * add the letter to the lastPartOfWord string
     * check if there are tiles above or below
       * if there are tiles above or below, call findWordByColumn
-          * if findWordByColumn returns a valid word, add to allWordsForPlay
+          * if findWordByColumn returns a valid word, add to allWordsForPlay array
 4. Add firstPartOfWord and lastPartOfWord to get full currentWord
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
 6. Return allWordsForPlay
