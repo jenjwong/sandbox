@@ -24,19 +24,21 @@ npm run test -s
 
 # Solution
 
-My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score.
+My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. The rules module handles validation of pieces based on physical location on the board. The words module handles validation reliant on words. The score module handles calculating points for tiles. 
 
-## findWordByRow
+The most challenging problem was scoring multiple words; this was handled with *findWordByRow* or *findWordByColumn*. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score. The findWord functions builds up a string along the main axis. As the function traverses the main axis and builds the string it also checks to see if there are any tiles adjacent to tiles placed during that turn, and if there are the function traverses the cross axis to see if its a valid word.
+
+## findWordByRow  
 1. Starts at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
     * Add the letter to the firstPartOfWord string
-    * Check if there are tiles above or below
-      * If there are tiles above or below, call findWordByColumn
+    * If the tile was placed this turn, check if there are tiles above or below
+      * If there are tiles above or below and you are on the main axis, call findWordByColumn
         * If findWordByColumn returns a valid word, add to allWordsForPlay array
 3. While there are tiles to the right, for each tile:
     * Add the letter to the lastPartOfWord string
-    * Check if there are tiles above or below
-      * If there are tiles above or below, call findWordByColumn
+    * If the tile was placed this turn, check if there are tiles above or below
+      * If there are tiles above or below and you are on the main axis, call findWordByColumn
           * If findWordByColumn returns a valid word, add to allWordsForPlay array
 4. Add firstPartOfWord and lastPartOfWord to get full currentWord
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
@@ -52,8 +54,7 @@ Given more time I'd be keen to improve modularity and organization of the code. 
 Tests call *playTiles* which coordinates all of the other functions used to generate the score.
 
 ## playTiles
-1. Runs validation function *rules.isFirstMoveValid* if it is the first move
-2. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis)
-3. If *rules.isFirstMoveValid*  and *_arePlacementsValid* are valid, it places the tiles on the board with *_moveTiles* and scores the word by running *_scoreWords* (which calls *findWordByRow* or *findWordByColumn*)
+1. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis, first move is valid)
+3. If *_arePlacementsValid* are valid, it places the tiles on the board with *_moveTiles* and scores the word by running *_scoreWords* (which calls *findWordByRow* or *findWordByColumn*)
 4. If there were no valid words, it runs *_moveTiles* to remove tiles from board
 5. Sets score in ScrabbleGame and returns score by running *_setScore*
