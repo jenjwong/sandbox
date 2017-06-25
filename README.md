@@ -24,7 +24,7 @@ npm run test -s
 
 # Solution
 
-My solution uses a board/2-d-matrix to keep track of game state. Helpers are broken into modules by functionality. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score.
+My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score.
 
 ## findWordByRow
 1. Starts at the coordinates of first tile placed
