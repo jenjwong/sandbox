@@ -33,9 +33,9 @@ My solution uses a 2-d matrix to keep track of game state. Helpers are broken in
     * check if there are tiles above or below
       * if there are tiles above or below, call findWordByColumn
 3. While there are tiles to the right, for each tile:
-  * add the letter to the lastPartOfWord string
-  * check if there are tiles above or below
-    * if there are tiles above or below, call findWordByColumn
+    * add the letter to the lastPartOfWord string
+    * check if there are tiles above or below
+      * if there are tiles above or below, call findWordByColumn
 4. Add firstPartOfWord and lastPartOfWord to get full currentWord
 5. If currentWord is in the dictionary add it to the allWordsForPlay array
 6. Return allWordsForPlay
