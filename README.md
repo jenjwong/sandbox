@@ -24,7 +24,7 @@ npm run test -s
 
 # Solution
 
-My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. The rules module handles validation of pieces based on physical location on the board. The words module handles validation reliant on words. The score module handles calculating points for tiles. 
+My solution uses a board(2-d-matrix) to keep track of game state. Helpers are broken into modules by functionality. The *rules module* handles validation of pieces based on physical location on the board. The *words module* handles validation reliant on words. The *score module* handles calculating points for tiles. 
 
 The most challenging problem was scoring multiple words; this was handled with *findWordByRow* or *findWordByColumn*. Based on if the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn and then the list is used to generate a score. The findWord functions builds up a string along the main axis. As the function traverses the main axis and builds the string it also checks to see if there are any tiles adjacent to tiles placed during that turn, and if there are the function traverses the cross axis to see if its a valid word.
 
