@@ -46,7 +46,7 @@ findWordByColumn works the same way. It was tempting to combine the functions in
 
 This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words on each turn by traversing the board and comparing against a dictionary of words already played to determine which words were newly generated. Although I think it would be easier to code this solution, I opted against it because of its increased memory usage and quadratic run time. Arguably the board is a set size and only a relatively small number of words can be placed on the board, so it's not necessary to optimize for worst case scenarios with massive input, but my chosen approach lends itself more to logical seperation of functionality.
 
-Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to write more tests for additional edge-cases.
+Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to write more tests for additional edge-cases and build out the game so it has players!
 
 Tests call *playTiles* which coordinates all of the other functions to generate the score.
 
