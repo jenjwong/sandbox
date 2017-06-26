@@ -27,7 +27,7 @@ My solution uses a board(2d-matrix) to keep track of game state. Helpers are bro
 The most challenging problem was scoring multiple words; this was handled with *findWordByRow* and *findWordByColumn*. Depending on wether the new word is placed along a row, or down a column, *findWordByRow* or *findWordByColumn*  is called to generate a list of valid words for the turn. findWordByRow/findWordByColumn traverses the main axis and build up a string of the current word, it also checks to see if there are any tiles adjacent to tiles placed during that turn. If there are adjacent tiles, the function traverses the cross-axis to see if it's a valid word.
 
 ## findWordByRow Speudocode
-1. Starts at the coordinates of first tile placed
+1. Start at the coordinates of first tile placed
 2. While there are tiles to the left, for each tile:
     * Add the letter to the firstPartOfWord string
     * If the tile was placed this turn, check if there are tiles above or below
