@@ -42,7 +42,7 @@ The most challenging problem was scoring multiple words; this was handled with *
 5. If currentWord is in the dictionary add it to the allWordsForTurn array
 6. Return allWordsForTurn
 
-findWordByColumn works the same way. It was tempting to combine the functions into one that could be customized and called recursively, but it unnecessarily increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explicitly defines its variables, making it longer but more intuitive.
+findWordByColumn works the same way as findWordByRows. It was tempting to combine the functions into one that could be customized and called recursively, but it unnecessarily increased complexity and decreased readability. findWordByRow is commented and findWordByColumn explicitly defines its variables, making it longer but more intuitive.
 
 This is a fun problem with lots of possible solutions! Another solution I briefly considered was to generate all words on each turn by traversing the board and comparing against a dictionary of words already played to determine which words were newly generated. Although I think it would be easier to code this solution, I opted against it because of its increased memory usage and quadratic run time. Arguably the board is a set size and only a relatively small number of words can be placed on the board, so it's not necessary to optimize for worst case scenarios with massive input, but my chosen approach lends itself more to logical seperation of functionality.
 
