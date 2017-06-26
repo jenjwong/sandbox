@@ -48,7 +48,7 @@ This is a fun problem with lots of possible solutions! Another solution I briefl
 
 Given more time I'd be keen to improve modularity and organization of the code. Also I'd like to write more tests for additional edge-cases.
 
-Tests call *playTiles* which coordinates all of the other functions used to generate the score.
+Tests call *playTiles* which coordinates all of the other functions to generate the score.
 
 ## playTiles Speudocode
 1. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis, first move is valid)
