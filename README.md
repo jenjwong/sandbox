@@ -53,5 +53,5 @@ Mocha tests call *playTiles* which coordinates all of the other functions to gen
 ## playTiles Speudocode
 1. Runs validation function *_arePlacementsValid* to make sure pieces are physically placed correctly (placed on board, in an open spot, all in one axis, first move is valid)
 3. If *_arePlacementsValid* are valid, it places the tiles on the board with *_moveTiles* and scores the word by running *_scoreWords* (which calls *findWordByRow* or *findWordByColumn*)
-4. If there were no valid words, it runs *_moveTiles* to remove tiles from board
+4. If there are no valid words, it runs *_moveTiles* to remove tiles from board
 5. Sets score in ScrabbleGame and returns score by running *_setScore*
