@@ -9,8 +9,8 @@
 * Enzyme, Jest, Mocha, Codecept.js
 
 ---
-## Expense Trackr Dash:
-![expenseTrackr](https://github.com/jenjwong/expenseTrackr/blob/development/client/public/etrackr.png)
+## Typeahead Dash:
+![expenseTrackr](https://github.com/jenjwong/expenseTrackr/blob/development/client/public/typeahead.png)
 ---
 
 ## Getting Started
@@ -27,6 +27,13 @@ npm run start
 
 ### Client-Side Technologies
 To streamline development the project uses [Facebook's Create React App](https://github.com/facebookincubator/create-react-app)
+
+### Features
+- provides contextual help explaning supported functions and comparators
+- if user enters invalid invalid input typeahead displays a help message with a link to mock-documentation
+- uses a reusable regular expressions helper function to match the start of words
+- input field always stays in focus so users don't have to click to continue typing
+- auto-completes today's date if user starts function with @created_at
 
 ## Tests
 
