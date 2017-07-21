@@ -1,4 +1,4 @@
-# Udacity Adaptive Page with Socket.io Chat Feature
+# Adaptive Page with Socket.io Chat Feature
 
 [This site is deployed on Digital Ocean at http://udacity.jenjwong.tech/](http://udacity.jenjwong.tech/)
 
