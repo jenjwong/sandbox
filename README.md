@@ -1,4 +1,6 @@
-# Udacity Portfolio with Socket.io Chat Feature
+# Udacity Adaptive Page with Socket.io Chat Feature
+
+[This site is deployed on Digital Ocean at http://udacity.jenjwong.tech/](http://udacity.jenjwong.tech/)
 
 ### Technologies
 
@@ -33,13 +35,6 @@ npm run dev
 This command uses the concurently module to start the Express server and run the React environment. 
 
 To streamline development the project uses [Facebook's Create React App](https://github.com/facebookincubator/create-react-app)
-
-### Features
-- provides contextual help explaning supported functions and comparators
-- if user enters invalid invalid input typeahead displays a help message with a link to mock-documentation
-- uses a reusable regular expressions helper function to match the start of words
-- input field always stays in focus so users don't have to click to continue typing
-- auto-completes today's date if user starts function with @created_at
 
 ## Tests
 
