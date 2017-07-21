@@ -38,26 +38,9 @@ To streamline development the project uses [Facebook's Create React App](https:/
 
 ## Tests
 
-Expense Trackr implements unit and end-to-end testing with Mocha, Enzyme, Jest, and Codecept.js.
+This application implements basic testing with Enzyme, and Jest.
 
-React components are tested with [Jest](https://facebook.github.io/jest/) with [Enzyme](https://github.com/airbnb/enzyme). Enzyme allows shallow rendering of components, making it easy to isolate tests. Shallow rendering in Enzyme renders components one level deep so a component can be tested in isolation of its child components. 
-
-To execute the client test suite, in the client directory run:
+To execute the test suite, in the client directory run:
 ```
 npm run test
-```
-
-Codecept.js, a JavaScript Selenium wrapper, stores pictures of browser state during failed tests in endToend.output. With your dev environment running execute:
-```
-npm run selenium-start
-```
-and
-```
-npm run headless-tests
-```
-This will start the selenium server and run your Codecept tests.
-
-Mongo models and operations are tested with Mocha and stub-data. From the root directory execute:
-```
-npm run test-db
 ```
