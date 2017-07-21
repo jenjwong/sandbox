@@ -11,7 +11,7 @@
 * Node.js, Express
 
 #### Testing
-* Enzyme, Jest, Mocha, Codecept.js
+* Enzyme, Jest
 
 ---
 ## Mobile:
