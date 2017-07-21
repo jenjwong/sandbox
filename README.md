@@ -1,31 +1,37 @@
-# Typeahead
+# Udacity Portfolio with Socket.io Chat Feature
 
 ### Technologies
 
 #### Client
-* ES6, React
+* ES6, React, Socket.io
+
+#### Server
+* Node.js, Express
 
 #### Testing
 * Enzyme, Jest, Mocha, Codecept.js
 
 ---
-## Typeahead Dash:
-![expenseTrackr](https://github.com/jenjwong/expenseTrackr/blob/development/client/public/typeahead.png)
+## Mobile:
+![Mobile](https://github.com/jenjwong/udacity-sockets/blob/master/client/src/images/mobileScreen.png)
+---
+---
+## Desktop:
+![Desktop](https://github.com/jenjwong/udacity-sockets/blob/master/client/src/images/largeScreen.png)
 ---
 
 ## Getting Started
 
-To get a copy of the project up and running on your local machine clone the repository and in the root directory execute:
+To get a copy of the project up and running on your local machine clone the repository and in both the root directory and client directory execute:
 ```
 npm i
 ```
-
-Start the development environment by running:
+From the root directory start the development environment by running:
 ```
-npm run start
+npm run dev
 ```
+This command uses the concurently module to start the Express server and run the React environment. 
 
-### Client-Side Technologies
 To streamline development the project uses [Facebook's Create React App](https://github.com/facebookincubator/create-react-app)
 
 ### Features
